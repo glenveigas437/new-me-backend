@@ -16,7 +16,7 @@ from apps.tracking.views import ActivityListCreateView, MeasurementListCreateVie
 
 
 def frontend(request, path=""):
-    root = settings.BASE_DIR.parent / "frontend/dist"
+    root = settings.FRONTEND_DIST_DIR
     if path.startswith(("api/", "admin/", "static/")):
         raise Http404
     if path in [

@@ -137,3 +137,4 @@ LOGGING = {
         },
     },
 }
+FRONTEND_DIST_DIR = BASE_DIR / "staticfiles"
