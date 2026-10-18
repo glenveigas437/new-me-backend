@@ -1,5 +1,5 @@
 // Never cache authenticated requests, API responses, profile data, or measurements.
-const CACHE='betterme-shell-456eb82bec02';
+const CACHE='betterme-shell-574f679b64c4';
 self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(['/logo.svg','/icon-192.png']))));
 self.addEventListener('message',event=>{if(event.data==='SKIP_WAITING')self.skipWaiting()});
 self.addEventListener('activate',event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key!==CACHE).map(key=>caches.delete(key)))).then(()=>self.clients.claim())));
